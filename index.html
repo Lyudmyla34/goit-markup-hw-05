@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ДЗ-3</title>
+    <title>ДЗ-5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +30,8 @@
           >
           <ul class="list information-nav">
             <li class="information-li">
-              <a class="studio link" href="./index.html">Студия</a>
+              <a class="studio link" href="./index.html">Студия
+              </a>
             </li>
             <li class="information-li">
               <a class="portfo link" href="./portfolio.html">Портфолио</a>
@@ -63,8 +64,8 @@
       <section class="section-n section">
         <div class="container section-div">
           <h1 class="section-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="buttons" type="button">Заказать услугу</button>
-        </div>
+          <button class="buttons " type="button" data-modal-open>Заказать услугу</button>          
+        </div>        
       </section>
       <!--Особенности-->
       <section class="section">
@@ -131,8 +132,9 @@
                 class="work-img-foto"
                 src="./images/img.jpg"
                 alt="Набор текста на компе"
-                width="370"
+                width="370"                
               />
+              <p class="work-text">Десктопные приложения</p>
             </li>
             <li class="work-img-li">
               <img
@@ -141,6 +143,7 @@
                 alt="Связь телефона с комп"
                 width="370"
               />
+              <p class="work-text">Мобильные приложения</p>
             </li>
             <li class="work-img-li">
               <img
@@ -149,6 +152,7 @@
                 alt="связь с планшетом"
                 width="370"
               />
+              <p class="work-text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -446,5 +450,14 @@
       </div> 
       </div>     
     </footer>
+    <!--модальне вікно-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-modal-close" data-modal-close> <svg width="11" height="11">
+          <use href="./images/symbol-defs.svg#icon-close-black-18dp-2-1"></use>
+        </svg> </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
