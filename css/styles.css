@@ -18,17 +18,7 @@
 .information-nav.studio {
   color: var(--accent-color);
 }
-.information-nav.studio::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
-}
+
 body {
   align-items: center;
   margin: 0;
@@ -104,13 +94,16 @@ body {
 .logo-accent {
   color: var(--primary-text-second-color);
 }
-.line::after{
+.studio.link.line::after {
+  content: " ";
+  display: inline-block;
   position: absolute;
-    width: 48px;
-    height: 4px;    
-  
-    background: #2196F3;
-    border-radius: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 /* контакти */
 .studio:hover,
@@ -128,7 +121,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
+  position: relative;
   color: var(--accent-color);
   transition-property: color;
   transition-duration: 250ms;
@@ -191,6 +184,7 @@ body {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  
 }
 .mail-tel {
   margin: auto;
@@ -230,6 +224,9 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .telefon:hover,
 .telefon:focus {
@@ -269,8 +266,7 @@ body {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/comanda.jpg);
-  background-position: center;
-  background-size: contain;
+  background-position: center;  
   background-repeat: no-repeat;
 }
 
@@ -869,11 +865,7 @@ footer {
   background-color: var(--accent-color);
 }
 
-.social-link-footer.cocial-icon-footer {
-  transition-property: fill;
-  transition-duration: 5000ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .social-link-footer:hover .social-icon-footer {
   fill: var(--background-color);
 }
@@ -884,9 +876,7 @@ footer {
 
 .social-icon-footer {
   fill: var(--background-color);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 .social-icon-footer:hover,
@@ -898,6 +888,17 @@ footer {
 
 .header.header-line {
   border-bottom: 1px solid #ececec;
+}
+.portfo-portfo.link.line::after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 .studio-portf:hover,
 .studio-portf:focus {
@@ -916,6 +917,10 @@ footer {
   letter-spacing: 0.02em;
 
   color: var(--primary-text-second-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .visually-hidden {
   position: absolute;
@@ -942,6 +947,7 @@ footer {
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
+  position: relative;
 }
 .buttons-portfolio:hover,
 .buttons-portfolio:focus {
@@ -959,6 +965,7 @@ footer {
   margin: 0;
   margin-bottom: 56px;
 }
+
 .buttons-portfolio {
   border: none;
   padding-top: 6px;
@@ -978,9 +985,8 @@ footer {
 
   text-align: center;
   letter-spacing: 0.03em;
-
-  transition: color background-color box-shadow border-radius 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .services {
@@ -992,11 +998,13 @@ footer {
   margin-bottom: 56px;
 }
 
-.buttons-portfolio .link {
+.buttons-portfolio.link {
   display: inline-block;
+  
 }
 .buttons-li {
   margin-right: 8px;
+ 
 }
 
 .buttons-li:last-child {
