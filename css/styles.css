@@ -1109,6 +1109,7 @@ footer {
 }
 .services-li:focus .services-overlay {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .overlay-p {
